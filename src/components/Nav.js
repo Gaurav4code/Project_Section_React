@@ -25,7 +25,7 @@ const Nav = () => {
 
 export default Nav;
 const Container = styled.div`
-  margin-left: 165px;
+  margin-left: 166px;
   margin-top: 33px;
   display: flex;
   justify-content: space-between;
