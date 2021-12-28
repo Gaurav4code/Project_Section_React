@@ -23,7 +23,7 @@ const Container = styled.div`
   justify-content: space-evenly;
   border-radius: 25px;
 
-  margin-top: 50px;
+  margin-top: 100px;
 
   margin-left: 165px;
   margin-right: 165px;
