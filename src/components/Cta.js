@@ -1,6 +1,12 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const Cta = () => {
+  const Variants = {
+    hover: {
+      scale: 1.2,
+      color: "#eebf63"
+    }
+  };
   return (
     <Container>
       <Text>
@@ -8,7 +14,7 @@ export const Cta = () => {
         <br />
         with me?
       </Text>
-      <Button>
+      <Button variants={Variants} whileHover="hover">
         <i class="fas fa-envelope-square" />
         Email Me
       </Button>
@@ -45,7 +51,7 @@ const Text = styled.h1`
 
   color: white;
 `;
-const Button = styled.button`
+const Button = styled(motion.button)`
   height: 70px;
   width: 259px;
   left: 941px;

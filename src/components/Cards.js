@@ -3,15 +3,78 @@ import img4 from "../components/images/image4.png";
 import img5 from "../components/images/image5.png";
 import img6 from "../components/images/image6.png";
 import img7 from "../components/images/image7.png";
+import { motion } from "framer-motion";
 
 import { Card } from "../components/Card";
+
 export const Cards = () => {
+  const VariantsLeft = {
+    hidden: {
+      opacity: 0,
+      x: "-50vh"
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 1
+      }
+    },
+    hover: {
+      scale: 1.1
+    }
+  };
+  const VariantsRight = {
+    hidden: {
+      opacity: 0,
+      x: "50vh"
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 1
+      }
+    },
+    hover: {
+      scale: 1.1
+    }
+  };
+
   return (
     <Container>
-      <Card title="Minify - Web Design" image={img4} />
-      <Card title="Ant - Personal Portofolio" image={img5} />
-      <Card title="Lumy - Dashboard UI Kit" image={img6} />
-      <Card title="Keeper - Soccer Site" image={img7} />
+      <CardFlow
+        variants={VariantsLeft}
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+      >
+        <Card title="Minify - Web Design" image={img4} />
+      </CardFlow>
+      <CardFlow
+        variants={VariantsRight}
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+      >
+        <Card title="Ant - Personal Portofolio" image={img5} />
+      </CardFlow>
+      <CardFlow
+        variants={VariantsLeft}
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+      >
+        <Card title="Lumy - Dashboard UI Kit" image={img6} />
+      </CardFlow>
+      <CardFlow
+        variants={VariantsRight}
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+      >
+        <Card title="Keeper - Soccer Site" image={img7} />
+      </CardFlow>
     </Container>
   );
 };
@@ -28,3 +91,4 @@ const Container = styled.div`
   column-gap: 30px;
   row-gap: 100px;
 `;
+const CardFlow = styled(motion.div)``;
