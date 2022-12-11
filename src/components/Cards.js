@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import img4 from "../components/images/image4.png";
-import img5 from "../components/images/image5.png";
-import img6 from "../components/images/image6.png";
-import img7 from "../components/images/image7.png";
+import img4 from "../components/images1/image4.png";
+import img5 from "../components/images1/image5.png";
+import img6 from "../components/images1/image6.png";
+import img7 from "../components/images1/image7.png";
 import { motion } from "framer-motion";
 
 import { Card } from "../components/Card";

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import img4 from "../components/images/image4.png";
-import layers from "../components/images/layers.png";
-import eye from "../components/images/show.png";
+import img4 from "../components/images1/image4.png";
+import layers from "../components/images1/layers.png";
+import eye from "../components/images1/show.png";
 export const Card = (props) => {
   return (
     <Container>
